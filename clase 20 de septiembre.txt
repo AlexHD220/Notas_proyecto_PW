@@ -1,0 +1,18 @@
+index. listado o lista con los registros dentro de la base de datos 
+
+git fetch --all (luego cambiar a la rama)
+
+
+la consulta de la base de datos debe ser desde el controlador y pasar la variable hacia la vista
+
+bajar ramas 
+
+
+
+git fetch --all (bajar todas las ramas)
+
+git branch (listar ramas)
+
+git checkout NOMBRERAMA(cambiar entre ramas y main)
+
+git clone -b NOMBRE_RAMA URL_REPOSITORIO

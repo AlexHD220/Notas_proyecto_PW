@@ -1,0 +1,7 @@
+html solo conoce get y post
+
+aplicacion "any desk" para conectarme a culaquier computadora
+
+para mostrar los errores al validar el formulario en la documentacion de laravel --> validation --> display
+
+elegir plantilla que cubra la parte administrativa cpn bootstramp

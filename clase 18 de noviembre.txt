@@ -1,0 +1,54 @@
+composer create-project laravel/laravel NOMBRE_PROYECTO
+
+git init
+
+git add .
+
+git commit -m "comentario"
+
+git remote add .
+
+git push -u origin main ...
+
+code .
+
+cp .env.example .env
+
+
+	al clonar
+
+composer install
+
+php artisan key:generate
+
+
+git clone 
+
+git checkout -b NOMBRE <-- RAMIFICACION
+
+
+
+
+
+
+php artisan make:model nombreModelo -mcr <--- crear modelo (modelo, migracion (tabla) y controlador y )
+
+
+git push -u origin nombrerama <--- crear rama en remoto (la primera vez)
+
+
+creat tabla en code y luego php artisan migrate
+
+cambiar nombre primero en .env DB_DATABASE <-- solo la primera vez cambiarle 
+
+php artisan migrate
+
+
+
+Route::resource('usuario', UsuarioController::class);
+
+php artisan route:list
+
+vistas resources y views --> crear carpeta con nombre de tabla --> luego crear archivo createNombre.blade.php
+
+
