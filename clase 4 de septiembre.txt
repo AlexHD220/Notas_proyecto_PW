@@ -1,0 +1,134 @@
+pagina estatica: landing page (puro front end)
+aun no usamos conexion a base de datos, ni inserta registros, solo muestra informacion
+
+que muestre informacion sobre una persona o sobre un producto o negocio o empresa (landing page) quienes son, donde estan
+implemntar una plantilla, u tamplate o theme qe este basado en algun framework de css (buscar plantilla que nos guste y se acomode y descargarla y reemplazar el contenido) (pagina responsiva) mediaquery 
+responsiva significa que el diseño se ajusta a los diferentes tamaños de pantallas del celular, computadora, etc
+responsibily app
+no incluir informacion personal ni en el codigo fuente ni en la pagina
+
+publicar pagina (netlify (enlazar repositorio [recomendada para un tercero]), github pages [se enlaza con mi perfil de usuario github])
+entregar url del repositorio y del sitio 
+
+netlify crear primero repositorio aqui para agregar el nombre personalizado y luego enlazar con el repositorio
+
+navegador: landiing page free bootstrap 5 (no agarrar los primeros links, buscar diferentes)
+startbootstrap.com
+
+ctrl + shift + i --> inspeccionar pagina
+
+puede incluir un directorio .build o .html con el css 
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------> Clase
+
+MVS - modelo vita controlador
+
+laravel --> instalacion con docker pero es mejor utilizar linux for windows 
+
+Hacerlo desde laragon en la consola 
+
+https://laravel.com/docs/10.x#your-first-laravel-project
+
+Comando para generar cada uno de mis proyecto --> composer create-project laravel/laravel NOMBRE_PROYECTO
+
+*Si falla, me meto a la carpeta NOMBRE_PROYECTO y ejecuto el comando "composer install para instalarlo
+
+*Si eso tambien falla, borrar el directorio y volver a empezar en el paso de arriba
+
+no instalo laravel, utilizo laravel dentro de mi proyecto
+
+para el instalador es necesario instalarlo primero, y luego instalar larael de raiz, y depues solo requerire utilizar un comando mas chico
+
+instalador --> composer global require laravel/installer
+ 
+nuevo proyecto --> laravel new NOMBRE_PROYECTO
+
+
+Empezar a hacer el proyecto
+laravel es una caja de herramientas que nosotros aplicamos 
+
+al crear la carpeta o clanarla es dentro de www lego de esto todo lo demas es dentro de la carpeta creada
+
+ls --> listar carpetas
+
+composer install para instalar laragon correctamente
+
+dentro de la carpeta agregar el siguiente comando para generar la llave de encriptacion comando --> php artisan key:generate
+
+comando --> php artisan serv --> consola de comandos de laravel (crear consola de apache para nuestro proyecto [servidor]) <-- reemplazo de laragon
+
+navegador --> localhost:puerto <-- direccion de la pagina de mi servidor
+
+cualquier script de php necesito el servidor corriendo 
+
+comentario fuera de tema --> si laragon falla agregar https://carpeta.test
+
+ctrl + T y start para abrir una neva pestaña de laragon 
+
+composer.json --> es donde estan listads los paquetes que se ocupan
+
+carpeta vendor --> es donde se instalan los paquetes (esa carpeta no se toca ni se incluye en el repositorio)
+
+.gitinore --> archivos listados que github debe ignorar al cargar el repositorio 
+
+.env --> variables de entorno de esta instalacion en particular 
+app_key --> encriptacion de las coockies
+db_conection --> informacion para la coneccion con la base de datos
+mail_mailer --> informacion de correo para enviar correos desde la aplicacion
+aws_access_key_id --> almacenar archivos
+
+
+Diagrama MVC
+lo primero por dodne llega la informacion de peticiones es por un directorio de rutas --> routes[web.php] --> listado de todas las rutas de nuestra aplicacion ya sea get o push (incluye tambien que es lo que hara esa ruta)
+terminacion .blade.php --> motor de plantillas de php --> para meter codigo php dentro de codigos html de manera mas simple
+
+en algun punto eberemos guardar nuestros controladores --> http[controller.php] --> se encarga de recibir peticiones o request --> generalmente n se utiliza las carpetas, sino por medio de ctrl + p 
+carpeta public --> es lo unico que va a exponer nuestro programa al mundo, cualquier usuario sin iniciar sesion puede acceder, tambien debe incluir javascripts y css para que el usuaio pueda acceder a ellos.
+TODO EMPIEZA A PARTIR DEL INDEX
+
+*PENDIENTE: GENERAR LLAVE DE SSH PARA QUE AHI SE GUARDE MI USUARIO Y CONTRASEÑA CUANDO GENERE MIS REPOSITORIOS REMOTOS (TOKEN)
+
+
+
+
+CLONAR REPOSITORIO
+
+Ahora vamos a probar borrarlo y tomar un proyecto que ya existe y borrarlo
+
+*Presionar --> . <-- en mi teclado dentro de github para abrir un visual studio en el navegador
+
+dentroo de github en coding --> cloning --> copio el link para clonar 
+luego voy a la consola y con el siguiente comando clono el repositorio
+git clone LINKGITHUB
+
+ya que lo clone no existe ni la carpeta de vendor ni el .env --> por lo que mi servidor no sirve, necesito volver a instalar composer --> entrar a la carpeta con cd CARPETA y despues --> composer install
+
+cp .env.example .env --> genero mi archivo .env --> cp es copy
+
+dentro de .env cambio el nommbre de DB_DATABASE=laravel a DB_DATABASE=nombreBaseDatos
+
+*vuelvo a generar mi llave dentro de la carpeta agregar el siguiente comando para generar la llave de encriptacion comando --> php artisan key:generate
+
+*nuevamente levanto el servidor php  comando --> php artisan serv 
+
+o utilizo laragon, cualquiera de las 2 son valida
+
+
+
+IR CONSTRUYENDO PROYECTO CONFORME VAYAMOS CONTRUYENDO LOS EJEMPLOS AQUI EN EL SALON 
+
+PROYECTO 2 ES UN CROOD PARA UNA DE LAS TABLAS
+
+EN PUBLIC CASI NO LO VAMOS A UTILIZAR
+
+LAS RUTAS VAN EN WEB 
+
+ctrl + p (para bscar cualquier archivo)
+
+Route::get('/nombreRuta', function () {
+    return view('nombreArchivo');
+});
+
+generar archivo en la carpeta RESOURCES --> VIEWS --> nombreArchivo.blade.php
+
+Escribir html y seleccionar html:5 para generar cuerpo de html

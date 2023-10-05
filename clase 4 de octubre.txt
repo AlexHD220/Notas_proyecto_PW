@@ -1,0 +1,29 @@
+public estan todos los recursos publicos y accesibles desde el navegador sin importar ninguna reestriccion
+ahi van las css, js y lib imagenes y fonts de nuestro proyecto
+
+agregar mi vista en el archivo de web como si fuera el welcome de plantilla
+
+{{ asset('dark/css/style.css') }} --> me devuelve toda la ruta del directorio
+sino solo agregar siempre una diagola al principio e la referencia para decirle que se dirija al directorio public
+
+ctrl + d para seleccionar varios cursores
+alt para seleccionar varias lineas a la vez
+
+cambiar todas las rutas de el archivo
+
+leyaut --> acaomodo general de nuestra pagina y asi solo tengo una plantilla para mi sistema
+
+crear componente de clase y vista --> php artisan make:component Alerta
+
+llamarlo en <x-NOMBRE/> <x-Alerta>
+
+
+<!--<x-alerta tipoAlerta = "success">
+                    Hola Mundo
+                </x-alerta>-->
+
+
+buscar donde esta el contenido de en medio y eliminarlo para agregar ahi mi slot
+
+
+crear usuario y ese usuario registrarlo como asesor

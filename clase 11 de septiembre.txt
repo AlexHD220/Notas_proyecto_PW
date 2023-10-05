@@ -1,0 +1,42 @@
+todas las tablas en minuscula y nombre de forma plural
+
+modelo empieza en mayuscula, y se va a llmar igual que nuestra tabla pero en singular
+
+php artisan make:model Contacto -mcr <-- crear instancia 
+
+eloquent <-- comandos paracrear nuevo modelos (table mains)
+
+basic --> validation 
+
+con este modelo ya no necesitamos hacer un odigo de sql, obtenemos un nivel de abstraccion mas alto entre bases de datos sql
+
+controlador <-- otra clase (php artisan make:controller SitioController)
+
+transnferr funciones anonimas al contraldor para qe dejen de ser anonimas
+
+inventarios 
+cuentas
+eventos
+venta de boleto
+
+
+*echarr un vistazo al query builder para saber los metodos que existen documentacion de laravel
+
+
+*Metodos de controller (controlador)
+Listar tareas
+Mostrar 
+CrearTarea -> Form
+guardarTarea->save
+editar tarea -> form + info
+actualizar --> save
+Borrar
+
+Abreviaciones (metodos simples)
+a partir de la creacion del modelo podemos crer otras 2 cosas
+
+php artisan make:model Tarea -m -c -r <-- crea modelo, migracion, controlador 
+
+php artisan route:list <-- listar todas las rutas
+
+No requerir relacion aun nombre de tabla con las definiciones de que tipo de dato en cada caso

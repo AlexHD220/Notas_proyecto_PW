@@ -1,0 +1,38 @@
+INSTALAR JEATSTREAM --> parte de autentificacion
+
+fortify es el sistema de autentificacion sin cabeceras
+es el back end de nuestro sistema de autentificacion
+
+jetstream ==> es una interfaz grafica
+
+comando para agregar jeat stream dentro del proyecto de laravel
+
+composer require laravel/jetstream --> agregar el paquete
+
+
+Install Jetstream With Livewire =====> instalarlo en nuestro sistema (NO COPIAR USAR EL DE ABAJO)
+
+php artisan jetstream:install livewire --teams --dark    --> teams y dark son extras para modo de vista y agregar usuarios a eqipos
+
+
+pest php ==> validacion de programas (crea sintaxis mas elegante para hacer nuestras pruebas unitarias o funcionales)
+
+
+*hacer " composer install " una vez que clone de github porque estan instalados en la computadora no en el proyecto
+
+como estamos hablando de la parte de back end necesitamos instalar ciertos paquetes de npm <---- ME QUEDE AQUI
+
+npm install --> instalar paquetes de java script
+npm run build --> generar en public estos paquetes asets (css y java strips o imagenes)
+php artisan migrate:fresh --> modifico las migrasiones de user
+
+fresh ==> tumba todo lo borra de jalon
+refresh ==> borra de uno por uni
+
+ARCHIVO: dashboard.blade.php 
+layauts --> register, app
+app.blade.php
+
+css, java script imagenes y font y agregarlas a public para referenciarlas en public desde mi vista
+
+aventar a vistas el index crearle su propio con extencion .blade.php

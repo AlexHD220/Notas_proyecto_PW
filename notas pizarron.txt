@@ -1,0 +1,32 @@
+create apunta a vista a un formulacio de creacion 
+store valida y guarda formulario
+
+
+nombre --> index --> header listado
+
+nombre/create --> create --> header formulario
+
+
+agregar en usuarioController llamada al index y a create al archivo en view --> usuario --> nombre de archivo
+
+    /**
+     * Display a listing of the resource.
+     */
+    public function index()
+    {
+        return view("usuario/indexUsuario"); //<----- regresar vista al llamar al archivo index (usuario)
+    }
+
+    /**
+     * Show the form for creating a new resource.
+     */
+    public function create()
+    {
+        return view('usuario/createUsuario');
+    }
+
+
+enviar datos al store
+los datos del formulario los mandaremos a la ruta store
+
+git fetch all

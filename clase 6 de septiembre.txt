@@ -1,0 +1,49 @@
+action es a donde se van las respuestas del formulario (metodos get y push)
+
+BLADE
+
+pasar parametros por la url
+
+@csrf --> genera un imput oculto con un token para que el sistema valide que la informacion que estamos enviando viene de nuestro formulario para eviar cualquier tipo de ataque. TODOS LOS FORMULARIOS QUE ENVIEMOS DEBEMOS PONERLE ESTE TOKEN PARA QUE LE DE EL ACCESO A NUESTRO FORMULARIO
+
+puedo tener nombres de rutas iguales pero las diferencio por el tipo de metodo ya sea post o get
+
+Rutas (web.php) --> puntos por los cuales un usuario puede interactar con nuestra aplicacion, es decir los directorios dentro de nuestra pagina (SON RUTAS WEB)
+
+dentor de la ruta debo recibir los datos, y luego guardarlos dentro de mi base de datos
+
+request (laravel) --> 
+
+{tipo} <-- variable donde se guardara el nombre de mi ruta obligatoriamente
+{tipo?} (type = null) <-- ruta opcional
+
+atravez de una ruta puedo jgar con los parametros de esta por medio de los comandos anteriores
+
+view --> concatenar metodos
+
+<?php codigo ?> == {{ codigo}} <-- limpiar variables contra injeccion de sqls (dobles llaves)
+
+@ --> abrir codigo html (se requiere un @ para cerrar)
+
+*investigar blade dentro de laravel
+
+migracion --> archivos con la estructura de nuestra base de datos
+
+1. elegir nombre para mi tabla (escrito en minusculas y en plural [s al final] y usar guines bajos) --> php artisan make:migration create_contactos_tables
+
+.env informacion importate para mi aplicacion 
+
+php artisan | grep migration --> buscar todos mos comandos con un nombre relacionado a migration
+
+php artisan make:migration create_contactos_tables --> crear una nueva migracion 
+
+luego de esto me voy a la carpeta migration dentro de mi codigo y abro el nuevo archivo para agregar mis columnas en  Schema::create('contactos', function (Blueprint $table) debajo de ID
+
+luego ejecuto --> php artisan migrate --> para migrar las tablas dentro de mi carpeta de migrates a mi base de datos
+
+el nombre de mis columnas debe ser el mismo nombre de mis inputs
+
+php artisan migrate:rollback --> ctrl + z dentro de la base de datos para desacer mi migracion
+
+php artisan make:migration create_contactos_tables --> crear codigo dentro de mi carpeta migrate para generar mi tabla con up y down
+php artisan migrate --> crear tabla dentro de mi base de datos
