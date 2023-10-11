@@ -1,0 +1,28 @@
+03:10 p. m. 09/10/2023
+
+relaciones en la base de dato
+
+*1 a muchos donde cada norma incluye varios requerimentos 
+
+nueva tabla a traves de migracion, controlador, tabla etc
+
+la llave foranea se llamara como la tabla a la que referencia pero en singular estandar llave foranea --> nombreTablaSingular_ID
+
+primero hacemos la migracion y luego 
+
+php artisan make:model Requerimiento -mcr
+
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
+ 
+Schema::table('posts', function (Blueprint $table) {
+    $table->unsignedBigInteger('user_id');  // ----------------> generar columna de llave foranea
+ 
+    $table->foreign('user_id')->references('id')->on('users'); // ---------> referenciar la llave primaria de la otra tabla 'users'
+});
+
+forma sencilla de hace lo mismo
+
+Schema::table('posts', function (Blueprint $table) {
+    $table->foreignId('user_id')->constrained();
+});
