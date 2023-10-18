@@ -1,0 +1,33 @@
+**RELACION 1 A 1 **
+
+agregar columna de llave foranea a la tabla de mi usuario 
+
+crear columna por medio de una migracion 
+
+mi tabla ya esta en produccion y no puedo tumbarla y luego recuperarla
+
+*crear un nueva coluna en nuestra tabla asesores 
+php artisan make:migration --table asesores add_user_id_to_asesores_table
+
+auth::user() --> recuperar el usuario logueado
+
+use Illuminate\Support\Facades\Auth;
+ 
+//recuperar el usuario logueado
+$user = Auth::user();
+ 
+/ recuperar el ID del usuario logueado
+$id = Auth::id();
+
+https://laravel.com/docs/10.x/authentication
+
+mysql -u localhot
+
+-------------------------------------------------------------------------------------
+
+**RELACION MUCHOS A MUCHOS**
+php artisan make:model -mcrfs Organizacion --> crear modelo organizacion
+
+php artisan migrate:fresh
+
+php artisan make:migration create_asesor_organizacion_table <--- crear tabla pibote entre asesores y organizacion

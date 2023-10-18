@@ -32,7 +32,7 @@ migraciones cn informacion de prueba
 
 ---> php artisan migrate:fresh --seed <----- generar datos con todo y la migracion 
 
-databaseseeder <------ Paso 3 archivo donde se ejecutan las factorys y seeders junto con el fresh
+databaseseeder.php <------ Paso 3 archivo donde se ejecutan las factorys y seeders junto con el fresh
 
 class DatabaseSeeder extends Seeder
 {
@@ -57,3 +57,6 @@ class DatabaseSeeder extends Seeder
 
 
 php artisan db:seed <------- comando para generar los datos 
+
+
+php artisan migrate:fresh --seed <--------------- comando para las tablas y los datos 

@@ -1,4 +1,4 @@
-git checkaout nombreRama --> cambiarme de plana
+git checkout nombreRama --> cambiarme de plana
 
 los names de los formularios deben corresponde al nombre de las columnas de la tabla donde seran insertados
 
