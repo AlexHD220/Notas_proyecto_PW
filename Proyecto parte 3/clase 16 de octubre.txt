@@ -1,0 +1,11 @@
+git checkaout nombreRama --> cambiarme de plana
+
+los names de los formularios deben corresponde al nombre de las columnas de la tabla donde seran insertados
+
+https://laravel.com/docs/10.x/eloquent#mass-assignment
+
+
+
+kernel.php
+
+protected middleware -> auth Authenticate::class <-- proteger pestañas con inicio de sesion

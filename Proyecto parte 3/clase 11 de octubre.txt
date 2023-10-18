@@ -1,0 +1,59 @@
+fortify.php --> configuracion del inicio de sesion 
+
+'home' => RouteServiceProvider::HOME, --> a donde me lleva cuando inciio sesion 
+
+---------------------------------------------------------------------------------------
+
+-mcr
+-s ---> clase tipo seed
+-f ---> crear factory para regerar datos
+
+php artisan make:factory -m NombreModelo NombremodeloFactory
+
+php artisan make:factory -m Asesor AsesorFactory <----- Paso 1
+
+php faker genera informacion falsa para poblar informacion en nuesras tablas para saber como se comportara la pagina con tanto x de informacion
+https://fakerphp.github.io/
+
+
+Factory genera datos falsos para llenar mi tabla con datos imaginarios o registoa
+
+php artisan make:seeder NombremodeloSeeder
+
+php artisan make:seeder AsesorSeeder  <----- Paso 2
+
+
+crer registros en la base de datos
+
+php artisan db:seed --class AsesorSeeder
+
+
+migraciones cn informacion de prueba
+
+---> php artisan migrate:fresh --seed <----- generar datos con todo y la migracion 
+
+databaseseeder <------ Paso 3 archivo donde se ejecutan las factorys y seeders junto con el fresh
+
+class DatabaseSeeder extends Seeder
+{
+    /**
+     * Seed the application's database.
+     */
+    public function run(): void
+    {
+        // \App\Models\User::factory(10)->create();
+
+        // \App\Models\User::factory()->create([
+        //     'name' => 'Test User',
+        //     'email' => 'test@example.com',
+        // ]);
+
+        //lista de seeders que quiero que se ejecuten
+        $this->call([
+            AsesorSeeder::class,
+        ]); // --> php artisan db:seed
+    }
+}
+
+
+php artisan db:seed <------- comando para generar los datos 
