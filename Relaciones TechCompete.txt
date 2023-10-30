@@ -1,0 +1,23 @@
+1 escuela tiene muchos asesores, muchos equipos y muchos participantes
+1 asesor tiene muchos equipos y muchos participantes
+1 equipo tiene muchos participantes y 1 solo asesor
+1 participante puede estar en muchos equipos y tener muchos asesores
+
+1 equipo tiene solo una competencia 1:M
+
+
+1 competencia tiene muchas categorias, muchos equipos
+
+Entidades:
+- escuelas (usuarios)
+- asesores
+- equipos
+- participantes
+
+- competencias
+- categorias
+
+el que necesita de la otra tabla es el que tiene la llave foranea 1:M y 1:1
+
+Ambos necesitan de ambos asi que ambos utilizan las llaves foraneas M:N
+

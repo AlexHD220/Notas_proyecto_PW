@@ -1,0 +1,37 @@
+**Uno a uno**
+Una entidad del conjunto de entidades A puede asociarse con a lo sumo una entidad del conjunto de entidades B y viceversa.
+
+
+
+**Uno a muchos**
+Una entidad del conjunto de entidades A puede asociarse con más de una entidad del conjunto de entidades B, sin embargo, una entidad del conjunto de entidades B puede asociarse con, como máximo,a una entidad.
+
+Las relaciones uno-a-uno tienen 1 especificado para ambas cardinalidades, y no parecen surgir muy a menudo. Para ilustrar un uno-a-uno, requerimos reglas comerciales muy específicas.
+
+Supongamos que tenemos personas y vehículos. Supongamos que solo nos preocupamos por el conductor actual de un vehículo, y que solo nos preocupa el vehículo actual que el conductor está conduciendo. Entonces, tenemos una relación uno-a-uno entre Vehículo y Persona.
+
+**Muchos a uno**
+Más de una entidad del conjunto de entidades A puede asociarse como máximo con una entidad del conjunto de entidades B, sin embargo, una entidad del conjunto de entidades B puede asociarse con más de una entidad del conjunto de entidades A.
+
+Una entidad de A puede asociarse con más de una entidad desde B y viceversa.
+
+Este tipo de relación tiene 1 y n especificado para sus cardinalidades, y es muy común en diseños de bases de datos. Supongamos que tenemos clientes y pedidos y las reglas comerciales:
+
+una orden está relacionada con un cliente
+un cliente puede tener cualquier número (cero o más) de pedidos.
+Decimos que hay una relación uno a muchos entre el cliente y el pedido, y dibujamos esto como:
+
+cliente pedido
+
+
+
+**Relación de muchos a muchos**
+Las relaciones de muchos a muchos tienen "muchos" especificados para ambas cardinalidades, y también son muy comunes.
+
+Sin embargo, si examina un modelo de datos en algún negocio, es muy probable que no vea ninguna relación de muchos a muchos en el diagrama. En esos casos, el modelador de datos ha resuelto las relaciones de muchos a muchos en dos relaciones uno a muchos.
+
+Supongamos que estamos interesados en cursos y estudiantes y el hecho de que
+los estudiantes se inscriben en los cursos: cualquier estudiante puede tomar varios cursos, un curso puede ser tomado por varios estudiantes.
+
+Esta situación se representa con una relación de muchos a muchos
+entre curso y estudiante:
