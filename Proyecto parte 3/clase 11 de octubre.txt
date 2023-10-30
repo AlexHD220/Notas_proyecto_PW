@@ -1,6 +1,8 @@
 fortify.php --> configuracion del inicio de sesion 
 
-'home' => RouteServiceProvider::HOME, --> a donde me lleva cuando inciio sesion 
+'home' => RouteServiceProvider::HOME, --> a donde me lleva cuando inicio sesion 
+
+RouteServiceProvider.php --> public const HOME = '/asesor';
 
 ---------------------------------------------------------------------------------------
 

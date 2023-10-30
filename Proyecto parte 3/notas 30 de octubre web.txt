@@ -1,0 +1,31 @@
+
+
+usuario
+asesores
+equipos (nombre del equipo, competencia, categoria)
+proyectos 
+participantes
+
+
+competencias (proyecto o equipo)
+categorias
+
+
+php artisan make:migration --table asesores add_user_id_to_asesores_table
+
+php artisan route:list
+
+
+
+<!--@if ($equipo->participantes->count() > 0)
+        <br>
+        <h4>Participantes</h4>
+
+        <ul>
+            @foreach(equipo->participantes as $participante)
+                <li>
+                    {{ $participante -> nombre }}
+                </li>
+            @endforeach
+        </ul>
+    @endif-->

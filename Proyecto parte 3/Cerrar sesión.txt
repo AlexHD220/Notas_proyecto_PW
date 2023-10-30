@@ -1,0 +1,8 @@
+			    <!-- Authentication -->
+                            <form id="logout-form" method="POST" action="{{ route('logout') }}">
+                                @csrf
+                            </form>
+                            
+                            <a class="" onclick="document.getElementById('logout-form').submit();">
+                                {{ __('Cerrar sesión') }}
+                            </a> 

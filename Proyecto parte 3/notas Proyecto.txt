@@ -1,0 +1,10 @@
+php artisan make:model Equ-mcr
+
+1 competencia tiene muchas categorias
+
+la cuenta es de la escuela y cada escuela registra a sus asesores
+dentro de cada asesor pueden registrar sus equipos y cada equipo tienenparticipantes con folios
+
+1 equipo puede teneder 1 o mas asesores y uno o mas participantes
+
+m11.395 --> logo dashboard

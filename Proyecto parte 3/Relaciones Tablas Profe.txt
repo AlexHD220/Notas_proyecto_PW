@@ -1,0 +1,38 @@
+Carrera (1 carrera tiene muchas materias 1:M)
+- ID
+- Nombre_Carrera
+
+
+Materias
+- ID
+- Nombre_materias
+
+- Carrera_ID (foreign Key) (constraints [reestriccion] para que el dato que tengo aqui exista en la tabla de Carrera) (si borro algo de la carrera me borre las materias relacionada "borrado en cascada")
+
+
+Alumnos
+- ID
+- Codigo
+- Nombre
+
+
+Se crea Tabla pivote para relaciones M:N (se toma el nombre en singular de la tabla y se ponen en orden alfabetico "alumno_materia")
+*Registro de que materias lleva cada alumno y a que a que materias pertenece cada alumnos
+
+Alumno_Materia
+- ID
+- Alumno_ID
+- Materia_ID
+- Calificacion (El valor se da en conjuncion del alumno con la materia)
+
+LLave compuesta
+
+*join -> juntar datos union entre dos tablas donde coincidan
+
+a lo mejor un equipo (proyecto) puede incribirse en muchas categorias 
+
+equipo y proyecto
+
+ctrol k c comentar todo <!---->
+
+{{-- --}}

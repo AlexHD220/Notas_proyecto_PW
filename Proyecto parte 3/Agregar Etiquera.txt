@@ -1,0 +1,79 @@
+C:\laragon\www
+λ cd solacyt
+
+C:\laragon\www\SOLACYT(tablaAsesoresP3 -> origin)
+λ git add .
+warning: in the working copy of 'resources/views/usuario/createUsuario.blade.php', CRLF will be replaced by LF the next time Git touches it
+warning: in the working copy of 'resources/views/usuario/editUsuario.blade.php', CRLF will be replaced by LF the next time Git touches it
+warning: in the working copy of 'public/dark/css/colores.css', CRLF will be replaced by LF the next time Git touches it
+
+C:\laragon\www\SOLACYT(tablaAsesoresP3 -> origin)
+λ git add .
+warning: in the working copy of 'resources/views/equipo/indexEquipo.blade.php', CRLF will be replaced by LF the next time Git touches it
+
+C:\laragon\www\SOLACYT(tablaAsesoresP3 -> origin)
+λ git add .
+warning: in the working copy of 'resources/views/equipo/indexEquipo.blade.php', CRLF will be replaced by LF the next time Git touches it
+
+C:\laragon\www\SOLACYT(tablaAsesoresP3 -> origin)
+λ git commit -m "Proyecto 2 - CRUD"
+[tablaAsesoresP3 7f93c02] Proyecto 2 - CRUD
+ 41 files changed, 649 insertions(+), 163 deletions(-)
+ create mode 100644 app/Http/Controllers/EquipoController.php
+ create mode 100644 app/Models/Equipo.php
+ create mode 100644 database/factories/EquipoFactory.php
+ create mode 100644 database/migrations/2023_10_19_013044_create_equipos_table.php
+ create mode 100644 database/seeders/EquipoSeeder.php
+ create mode 100644 public/dark/css/colores.css
+ create mode 100644 public/dark/img/solacytLogo - copia.png
+ create mode 100644 resources/views/equipo/indexEquipo.blade.php
+
+C:\laragon\www\SOLACYT(tablaAsesoresP3 -> origin)
+λ git push
+Enumerating objects: 122, done.
+Counting objects: 100% (122/122), done.
+Delta compression using up to 2 threads
+Compressing objects: 100% (65/65), done.
+Writing objects: 100% (68/68), 68.62 KiB | 1.11 MiB/s, done.
+Total 68 (delta 46), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (46/46), completed with 40 local objects.
+To https://github.com/AlexHD220/SOLACYT.git
+   77326bf..7f93c02  tablaAsesoresP3 -> tablaAsesoresP3
+
+C:\laragon\www\SOLACYT(tablaAsesoresP3 -> origin)
+λ git status
+On branch tablaAsesoresP3
+Your branch is up to date with 'origin/tablaAsesoresP3'.
+
+nothing to commit, working tree clean
+
+C:\laragon\www\SOLACYT(tablaAsesoresP3 -> origin)
+λ git log
+commit 7f93c02b2c573de423d244688196d6d62645dbed (HEAD -> tablaAsesoresP3, origin/tablaAsesoresP3)
+Author: Alejandro Hernández Dávila <alejandro.hdez.davila@gmail.com>
+Date:   Sun Oct 22 22:09:02 2023 -0600
+
+    Proyecto 2 - CRUD
+
+C:\laragon\www\SOLACYT(tablaAsesoresP3 -> origin)
+λ git tag Proyecto_2 7f93c02b2c573de423d244688196d6d62645dbed
+
+C:\laragon\www\SOLACYT(tablaAsesoresP3 -> origin)
+λ git tag
+Proyecto_2
+
+C:\laragon\www\SOLACYT(tablaAsesoresP3 -> origin)
+λ git push origin Proyecto_2
+Total 0 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/AlexHD220/SOLACYT.git
+ * [new tag]         Proyecto_2 -> Proyecto_2
+
+C:\laragon\www\SOLACYT(tablaAsesoresP3 -> origin)
+λ git status
+On branch tablaAsesoresP3
+Your branch is up to date with 'origin/tablaAsesoresP3'.
+
+nothing to commit, working tree clean
+
+C:\laragon\www\SOLACYT(tablaAsesoresP3 -> origin)
+λ
