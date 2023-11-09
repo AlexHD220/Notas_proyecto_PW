@@ -1,0 +1,27 @@
+eager loading
+
+https://laravel.com/docs/10.x/eloquent-relationships#eager-loading
+
+-----------------------------------------------------------
+
+barra de debugeo para entorno de desarrollo
+
+https://github.com/barryvdh/laravel-debugbar
+
+composer require barryvdh/laravel-debugbar --dev
+
+solo se instalaran en modo desarrollo
+
+barra de debugeo para entorno de desarrollo
+
+
+querys -> consultas a la base de datos
+
+-----------------------------------------------------------
+
+conultar todo y traernos todos los datos de jalon para no estar consultando varias veces solo uno
+
+$book = Book::with('autor.contacts')->get();
+
+
+https://laravel.com/docs/10.x/eloquent-relationships#eager-loading

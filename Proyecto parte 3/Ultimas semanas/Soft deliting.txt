@@ -1,0 +1,38 @@
+-> onDelete('cascade')    ||| se aplica a la llave foranea de la tabla dependiente
+
+04:54 p. m. 30/10/2023
+
+Borrado logico de datos
+
+DELITING MODELS
+
+soft deliting -> https://laravel.com/docs/10.x/eloquent#soft-deleting
+
+eliminar a nivel logico con una columna booleana que me levata una bandera cuando elimino el asesor a nivel de base de datos para que deje de mostrarse en mi programa
+
+MODELO
+
+namespace App\Models;
+ 
+use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\SoftDeletes;
+ 
+class Flight extends Model
+{
+    use SoftDeletes;
+}
+
+
+MIGRACION
+
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
+ 
+Schema::table('flights', function (Blueprint $table) {
+    $table->softDeletes();
+});
+
+
+*restaurar --> $flight->restore();
+
+*forzar eliminacion definitiva de la base de datos --> $flight->forceDelete();

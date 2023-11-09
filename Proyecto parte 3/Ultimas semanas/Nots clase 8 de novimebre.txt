@@ -1,0 +1,14 @@
+jetstream.php -> habilitar foto de perfil
+
+Features::profilePhotos(),
+
+Kernel.php -> http : reglas para proteger las vistas
+
+create new user es el store
+
+crear contraeña aleatoria que nadie sepa y pedirle al administrador que recupere la contraseña utilizando su correo para poder acceder a su cuenta
+
+
+problema de n+1 es el with al momento de pedir todos los registros del index en asesores solo pide todos los registros en lugar de pedirlos varias veces
+
+eager loading

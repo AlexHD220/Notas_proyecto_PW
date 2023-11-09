@@ -1,0 +1,74 @@
+
+04:34 p. m. 30/10/2023
+
+middleware limitar a inicio de sesion
+
+Gates --> validar el tipo de perfil y los accesos que tiene (reestringir el acceso en funcion el tipo de usuario, producto, registro a modificar, etc)
+-> nivel de autentificacion mas granular (puertas)
+
+https://laravel.com/docs/10.x/authorization#writing-gates
+
+archivo --> AuthServiceProvider.php
+
+en el metodo both
+
+public function boot(): void
+{
+    Gate::define('update-post', function (User $user, Post $post) {
+        return $user->id === $post->user_id;
+    });
+
+
+    Gate::define('update-post', function (User $user, Post $post) {
+        return $user->id === $post->user_id;
+    });
+}
+
+- el primer parametro es el nombre del gate (update-post)
+- segundo parametro una funcion para recibir una instancia del usuario
+
+para un usuario que pueda editar una publicacion necesito el usuario (user) y la publicacion (post)
+
+lo que devuelva el gate es un true o un false loque le permite el acceso a x cosas
+
+sirve para tener en un solo punto toda la logica de limitacion para nuestros usuarios
+
+se pueden crear los gates que necesitemos 
+
+
+para aplicar el gatese hace de la siguiente manera aunue existen algunas otras frmas de aplicarla 
+
+RECIBIR PETICION
+
+use Illuminate\Support\Facades\Gate; <--------- biblioteca
+
+class PostController extends Controller
+{
+    /**
+     * Update the given post.
+     */
+    public function update(Request $request, Post $post): RedirectResponse
+    {
+        if (! Gate::allows('update-post', $post)) {
+            abort(403);
+        }
+ 
+        // Update the post...
+ 
+        return redirect('/posts');
+    }
+}
+
+
+--------------------------------------------------------------------------------------
+
+Gate::authorize('update-post', $post);
+ 
+// The action is authorized...
+
+--------------------------------------------------------------------------------------
+
+OCULTAR BOTONES
+
+@can('admin-norma', $post)
+@endcan

@@ -1,0 +1,90 @@
+Correos
+
+archivo.env -> MAIL_
+
+servicio mailtrap.io --> atrapar los correos de prueba
+
+https://mailtrap.io/inboxes/2470267/messages
+
+
+*ANTERIOR
+
+MAIL_MAILER=smtp
+MAIL_HOST=mailpit
+MAIL_PORT=1025
+MAIL_USERNAME=null
+MAIL_PASSWORD=null
+
+
+fortify.php
+
+https://jetstream.laravel.com/features/registration.html --> Email Verification 
+
+email verification descomentar
+
+Features::emailVerification(),
+
+
+user.php
+
+Next, you should ensure that your App\Models\User class implements the Illuminate\Contracts\Auth\MustVerifyEmail interface. This interface is already imported into this model for you:
+
+use Illuminate\Contracts\Auth\MustVerifyEmail;
+
+class User extends Authenticatable implements MustVerifyEmail
+{
+    // ...
+}
+
+
+agregar middlewear de verificacion d correo para que limite al usuario hasta que no valide su correo
+
+
+
+
+mailtrap -> cliente de correos
+
+https://laravel.com/docs/10.x/mail#writing-mailables
+
+php artisan make:mail NotificaAsesorCreado <-- contructor de correo 
+
+
+public function envelope(): Envelope
+{
+    return new Envelope(
+        from: new Address('jeffrey@example.com', 'Jeffrey Way'),
+        subject: 'Order Shipped',
+    );
+}
+
+
+todos los atributos que declaro e el contructor estan automaticamnte disponibles en la vista
+
+agregar vista en mails en views
+
+https://laravel.com/docs/10.x/mail#markdown-mailables
+
+en el store notifica que el asesor se creo 
+
+use Illuminate\Support\Facades\Mail;
+
+Mail::to($request->user())->send(new NotificaAsesorCreado($asesor));
+
+
+Error vista
+
+<!--<x-mail::button: url="{{route('asesor.show', $asesor->id) }}"> 
+Ver asesor 
+</x-mail::button:>-->
+
+
+Agregar llave compuesta al formulario de asesores
+
+
+notificar por correo 
+
+php artisan make:mail NotificaAsesorCreado
+
+agregar vista de correo en formado md
+
+Mail::to($request->user())->send(new NotificaAsesorCreado($asesor));

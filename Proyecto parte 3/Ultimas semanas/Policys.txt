@@ -1,0 +1,83 @@
+POLICYS	
+
+https://laravel.com/docs/10.x/authorization#creating-policies
+
+php artisan make:policy PostPolicy
+
+php artisan make:policy PostPolicy --model=Post       --> crear policy 
+
+php artisan make:policy asesorPolicy --model=Asesor
+
+archivo --> AuthServiceProvider.php
+
+----------------------------------------------------------------------
+
+use App\Models\Post;
+use App\Models\User;
+use Illuminate\Auth\Access\Response;
+ 
+/**
+ * Determine if the given post can be updated by the user.
+ */
+public function update(User $user, Post $post): Response
+{
+    return $user->id === $post->user_id
+                ? Response::allow()
+                : Response::deny('You do not own this post.');
+}
+
+----------------------------------------
+
+
+Registrarla
+
+protected $policies = [
+        Post::class => PostPolicy::class,
+    ];
+
+decirle que a cierto modelo aplique ciertas politicas --> crea todos los metodos para autorizar los metodos de un controlador
+
+
+class PostPolicy
+{
+    /**
+     * Determine if the given post can be updated by the user.
+     */
+    public function update(User $user, Post $post): bool
+    {
+        return $user->id === $post->user_id;
+    }
+}
+
+
+generalmente es la misma logica para create, update y delete
+
+
+agregar la limitante hasta arriba en el contructor
+
+class PostController extends Controller
+{
+    /**
+     * Create the controller instance.
+     */
+    public function __construct()
+    {
+        $this->authorizeResource(Post::class, 'post');
+    }
+}
+
+
+
+
+OCULTAR BOTONES
+
+@can('update', $post)
+    <!-- The current user can update the post... -->
+@elsecan('create', App\Models\Post::class)
+    <!-- The current user can create new posts... -->
+@else
+    <!-- ... -->
+@endcan
+
+
+toda la logica gura en torno al archivo --> asesorPolicy y a su logica en el metodo aplicado
